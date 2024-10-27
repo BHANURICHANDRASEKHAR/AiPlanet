@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 MongooDB(); 
 app.use(cors({
-    origin: ['https://aiplanet-chandu.netlify.app'], 
+    origin: ['https://aiplanet-chandu.netlify.app','http://localhost:5173'], 
     credentials: true
 }));
 app.use(express.json()); 
