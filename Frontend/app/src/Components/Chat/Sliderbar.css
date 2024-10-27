@@ -1,0 +1,76 @@
+.img{
+   height: 3cm;
+    object-fit: contain;
+    padding: 5px;
+}
+.logo{
+    background-color: red;
+}
+.cs-message-input__tools:first-child{
+    display: none;
+}
+.cs-message-input__tools {
+    padding: 5px;
+   
+}
+.cs-button .cs-button--send{
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: red !important;
+}
+.end{
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.cs-message-input{
+    background-color: black;
+    
+}
+.ant-upload-wrapper .css-dev-only-do-not-override-ni1kz0{
+  margin-top: 1.2cm !important;
+}
+.cs-message-list__scroll-wrapper section{
+    margin-top: 3px !important;
+}
+.st{
+    
+    display:flex;
+    justify-content: start !important;
+}
+.cs-message--outgoing .cs-message__content{
+  background-color: rgb(235, 234, 234);
+  color: black;
+  font-weight: 550;
+}
+@media screen and (max-width: 768px) {
+    .ant-upload-wrapper .css-dev-only-do-not-override-ni1kz0{
+        margin-top: 0.6cm !important;
+      }
+      .img{
+        height: 2cm !important;
+      }
+}.message-container {
+    display: flex;
+    position: relative;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 10px; /* Space between messages */
+  }
+  
+  .message-container .Avatar1 {
+    margin-right: 10px; 
+  }
+  
+  .ai-message {
+    justify-content: flex-start; 
+  }
+  
+  .user-message {
+      position: absolute;
+      margin-top: 3px;
+     
+      right: 0px; 
+  }
+  .cs-message-input{
+    margin: 10px;
+  }
