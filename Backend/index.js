@@ -8,18 +8,18 @@ import cors from 'cors'
 dotenv.config();
 
 const app = express();
-MongooDB(); // Ensure this connects to your MongoDB
+MongooDB(); 
 app.use(cors({
-    origin: 'http://localhost:5173', 
-    credentials: true // Allow credentials
+    origin: '', 
+    credentials: true
 }));
-app.use(express.json()); // Middleware to parse JSON requests
+app.use(express.json()); 
 app.use(
     session({
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: true,
-        cookie: { secure: false }, 
+        cookie: { secure: true }, 
     })
 );
 
@@ -36,10 +36,8 @@ app.get('/test_session', (req, res) => {
     }
 });
 
-// Use the routers for handling requests
-app.use('/api/ask', Ask_Questions); // Prefix the route for better structure
-app.use('/api/upload', Pdf_extract);  // Prefix the route for better structure
+app.use('/api/ask', Ask_Questions); 
+app.use('/api/upload', Pdf_extract);  
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

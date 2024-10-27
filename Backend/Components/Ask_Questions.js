@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 
 
 const router = express.Router();
-const genAI = new GoogleGenerativeAI( process.env.GOOGLE_API_KEY ); // Replace with your Google API Key
+const genAI = new GoogleGenerativeAI( process.env.GOOGLE_API_KEY ); 
 
 // Endpoint to ask questions
 router.post("/", async (req, res) => {

@@ -19,12 +19,12 @@ router.post("/", upload.single("file"), async (req, res) => {
     }
   
     try {
-        // Double-check the buffer is available and log its presence
+       
         if (!req.file.buffer) {
             throw new Error("File buffer is empty.");
         }
 
-        // Parse the PDF data from the buffer
+        
         const data = await pdf(req.file.buffer).catch((error) => {
             throw new Error("Error during PDF parsing: " + error.message);
         });
