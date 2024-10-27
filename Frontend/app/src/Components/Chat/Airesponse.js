@@ -4,7 +4,7 @@ import axios from "axios";
 export default async function getResponse(SetLoader, setMessages, PdfData, query) {
 
     try {
-        const res = await axios.post(`http://localhost:5000/api/ask`, { question:query,PdfData:PdfData } ,{ withCredentials: true });
+        const res = await axios.post(`https://aiplanet-7i46.onrender.com/api/ask`, { question:query,PdfData:PdfData } ,{ withCredentials: true });
         if (res.data.status) {
           
             setMessages((prevMessages) => [

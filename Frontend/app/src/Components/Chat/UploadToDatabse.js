@@ -5,7 +5,7 @@ export default async function send_to_database(SetLoader,formData,setIsPdfUpload
    
     SetLoader(true);
     try{
-        const response=await axios.post('http://localhost:5000/api/upload',formData);
+        const response=await axios.post('https://aiplanet-7i46.onrender.com/api/upload',formData);
        
         if(response.data.status)
         {
